@@ -21,7 +21,9 @@ Naive Bayes is a probabilistic classifier based on Bayes’ Theorem:
 
 The “naive” assumption is that all features are independent given the class:
 <p align="center">
+	$$
 	P\left(x\middle| C_k\right)=\prod_{i=1}^{d}{P\left(x_i\middle| C_k\right)}
+	$$
 </p>
 ## Aim of the experiment:
 
