@@ -48,10 +48,17 @@ BernoulliNB	Features are binary (0/1, presence/absence)	Bernoulli distribution
 	Input: Pixel intensities (0–255) of MNIST handwritten digits
 	Output: Predicted digit (0–9)
 	Key math:
-P(C_k\mid x)\propto P(C_k)\prod_{i}P(x_i\mid C_k)
-
-where P(x_i\mid C_k)is modeled as a Gaussian:
-P(x_i\mid C_k)=\frac{1}{\sqrt{2\pi\sigma_{k,i}^2}}\exp\funcapply\mathrm{\thinsp⁣(-(xi-μk,i)22σk,i2)
+<p align="center">
+	$$
+	P(C_k\mid x)\propto P(C_k)\prod_{i}P(x_i\mid C_k)
+	$$
+</p>
+<p align="center">
+	$$
+	where P(x_i\mid C_k)is modeled as a Gaussian:
+	P(x_i\mid C_k)=\frac{1}{\sqrt{2\pi\sigma_{k,i}^2}}\exp\funcapply\mathrm{\thinsp⁣(-(xi-μk,i)22σk,i2)
+	$$
+</p>
 
 
 
@@ -67,10 +74,18 @@ The algorithm learns three main things from the training data:
 	For every pixel (feature) and class, GNB computes the mean (μ) and variance (σ²) of pixel intensities.
 	These parameters define a Gaussian (Normal) distribution for how that pixel behaves for a given digit.
 ## Mathematically:
-\mu_{k,i}=\frac{1}{N_k}\sum_{n:y_n=k}x_{n,i},\sigma_{k,i}^2=\frac{1}{N_k}\sum_{n:y_n=k}(x_{n,i}-\mu_{k,i})^2
+<p align="center">
+	$$
+	\mu_{k,i}=\frac{1}{N_k}\sum_{n:y_n=k}x_{n,i},\sigma_{k,i}^2=\frac{1}{N_k}\sum_{n:y_n=k}(x_{n,i}-\mu_{k,i})^2
+	$$
+</p>
 
 	Store Parameters
-	The model stores \pi_k, \mu_{k,i}, and \sigma_{k,i}^2for each class.
+	<p align="center">
+		$$
+		The model stores \pi_k, \mu_{k,i}, and \sigma_{k,i}^2for each class.
+		$$
+	</p>
 	During prediction, these parameters are used to compute the probability that a new image belongs to each digit class.
 
 ## In Code Terms, 
@@ -108,8 +123,7 @@ Results and brief discussion:
 After training the Gaussian Naive Bayes (GNB) classifier on the MNIST handwritten digit dataset, the model was evaluated on 10,000 unseen test images. Here we are using two techniques for test our prediction and model accuracy. 1. Classification Report 2. Confusion Matrix 
 
 ## The table below summarizes the per-class performance in terms of precision, recall, and F1-score
-<p align="center">
-	$$
+	
 	# Digit	Precision	Recall	F1-Score	Interpretation
 	0	0.79	0.89	0.84	Most zeros were recognized correctly with few false positives.
 	1	0.85	0.95	0.90	Excellent recognition of ones; very few misclassifications.
@@ -121,8 +135,8 @@ After training the Gaussian Naive Bayes (GNB) classifier on the MNIST handwritte
 	7	0.88	0.27	0.42	Few sevens detected, but predictions are mostly accurate.
 	8	0.28	0.67	0.40	Many digits misclassified as eights (low precision).
 	9	0.37	0.95	0.53	Nearly all nines detected, but with many false positives.
-	$$
-</p>
+	
+
 	
 # Overall performance:
 Metric	Value	Meaning
