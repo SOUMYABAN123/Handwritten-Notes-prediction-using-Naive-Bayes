@@ -1,4 +1,4 @@
-### Task1:  Handwritten Digit Classification using Naïve Bayes 
+###  Handwritten Digit Classification using Naïve Bayes 
 
 ## Abstract:
 Naive Bayes is a supervised, probabilistic classification algorithm based on Bayes’ theorem with the assumption that all features are conditionally independent given the class label.
