@@ -9,17 +9,20 @@ Naive Bayes is a probabilistic classifier based on Bayes’ Theorem:
 	P\left(C_k\middle| x\right)=\frac{P\left(x\middle| C_k\right)P\left(C_k\right)}{P\left(x\right)} 
 	$$
 </p>
-Where:
-	C_k= a possible class (e.g., digit 0–9)
-	x=(x_1,x_2,\ldots,x_n)= the feature vector (pixel values)
-	P(C_k\mid x)= posterior probability of class C_kgiven the input x
-	P(C_k)= prior probability of class C_k
-	P(x\mid C_k)= likelihood of seeing data xgiven class C_k
-	P(x)= probability of the data (same for all classes, so we ignore it for comparison)
+<p align="center">
+	Where:
+		C_k= a possible class (e.g., digit 0–9)
+		x=(x_1,x_2,\ldots,x_n)= the feature vector (pixel values)
+		P(C_k\mid x)= posterior probability of class C_kgiven the input x
+		P(C_k)= prior probability of class C_k
+		P(x\mid C_k)= likelihood of seeing data xgiven class C_k
+		P(x)= probability of the data (same for all classes, so we ignore it for comparison)
+</p>
 
 The “naive” assumption is that all features are independent given the class:
-
-P\left(x\middle| C_k\right)=\prod_{i=1}^{d}{P\left(x_i\middle| C_k\right)}
+<p align="center">
+	P\left(x\middle| C_k\right)=\prod_{i=1}^{d}{P\left(x_i\middle| C_k\right)}
+</p>
 ## Aim of the experiment:
 
 This work builds a supervised classifier for handwritten digits (0–9) using the Gaussian Naive Bayes (GNB) approach. We train and evaluate on the MNIST dataset in CSV form (label + 784 pixel features). Under the naïve conditional-independence assumption, class posteriors are computed via Bayes’ theorem, with each pixel modeled as a class-conditional Gaussian. Priors are estimated from class frequencies, while per-class per-pixel means and variances are estimated from the training set. Minimal preprocessing is applied (type coercion, NaN removal, optional normalization to [0,1]). The trained GNB predicts the class maximizing the log-posterior sum across pixels. Performance is assessed on the held-out test set using accuracy and a confusion matrix to analyze per-digit errors. Despite its simplicity and the strong independence assumption, GNB provides a fast, parametric baseline for image classification and establishes a reference point for more complex models.
