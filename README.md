@@ -10,6 +10,7 @@ Naive Bayes is a probabilistic classifier based on Bayes’ Theorem:
 	$$
 </p>
 <p align="center">
+	$$
 	Where:
 		C_k= a possible class (e.g., digit 0–9)
 		x=(x_1,x_2,\ldots,x_n)= the feature vector (pixel values)
@@ -17,6 +18,7 @@ Naive Bayes is a probabilistic classifier based on Bayes’ Theorem:
 		P(C_k)= prior probability of class C_k
 		P(x\mid C_k)= likelihood of seeing data xgiven class C_k
 		P(x)= probability of the data (same for all classes, so we ignore it for comparison)
+	$$
 </p>
 
 The “naive” assumption is that all features are independent given the class:
