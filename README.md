@@ -94,7 +94,11 @@ Compare Predictions with Actual Labels
 	The predicted labels (y_pred) are compared to the true labels (y_test) to measure performance.
 Calculate Performance Metrics
 	Accuracy: percentage of correctly classified digits
-	\mathrm{Accuracy}=\frac{\mathrm{Correct\ Predictions}}{\mathrm{Total\ Test\ Samples}}
+	<p align="center">
+		$$
+		\mathrm{Accuracy}=\frac{\mathrm{Correct\ Predictions}}{\mathrm{Total\ Test\ Samples}}
+		$$
+	</p>
 
 Confusion Matrix: shows how many images of each digit were correctly or incorrectly classified.
 Classification Report: includes precision, recall, and F1-score for each class.
@@ -104,19 +108,22 @@ Results and brief discussion:
 After training the Gaussian Naive Bayes (GNB) classifier on the MNIST handwritten digit dataset, the model was evaluated on 10,000 unseen test images. Here we are using two techniques for test our prediction and model accuracy. 1. Classification Report 2. Confusion Matrix 
 
 ## The table below summarizes the per-class performance in terms of precision, recall, and F1-score
-
-# Digit	Precision	Recall	F1-Score	Interpretation
-0	0.79	0.89	0.84	Most zeros were recognized correctly with few false positives.
-1	0.85	0.95	0.90	Excellent recognition of ones; very few misclassifications.
-2	0.90	0.26	0.40	High precision but many actual twos were missed.
-3	0.71	0.35	0.47	Moderate precision and low recall; often confused with similar digits.
-4	0.88	0.17	0.29	The model rarely predicts fours but is mostly correct when it does.
-5	0.55	0.05	0.09	Very poor recognition of fives, with high confusion.
-6	0.65	0.93	0.77	Good detection of sixes, though some false positives occur.
-7	0.88	0.27	0.42	Few sevens detected, but predictions are mostly accurate.
-8	0.28	0.67	0.40	Many digits misclassified as eights (low precision).
-9	0.37	0.95	0.53	Nearly all nines detected, but with many false positives.
-
+<p align="center">
+	$$
+	# Digit	Precision	Recall	F1-Score	Interpretation
+	0	0.79	0.89	0.84	Most zeros were recognized correctly with few false positives.
+	1	0.85	0.95	0.90	Excellent recognition of ones; very few misclassifications.
+	2	0.90	0.26	0.40	High precision but many actual twos were missed.
+	3	0.71	0.35	0.47	Moderate precision and low recall; often confused with similar digits.
+	4	0.88	0.17	0.29	The model rarely predicts fours but is mostly correct when it does.
+	5	0.55	0.05	0.09	Very poor recognition of fives, with high confusion.
+	6	0.65	0.93	0.77	Good detection of sixes, though some false positives occur.
+	7	0.88	0.27	0.42	Few sevens detected, but predictions are mostly accurate.
+	8	0.28	0.67	0.40	Many digits misclassified as eights (low precision).
+	9	0.37	0.95	0.53	Nearly all nines detected, but with many false positives.
+	$$
+</p>
+	
 # Overall performance:
 Metric	Value	Meaning
 Accuracy	0.56	56% of test digits correctly classified overall.
