@@ -4,10 +4,11 @@
 Naive Bayes is a supervised, probabilistic classification algorithm based on Bayes’ theorem with the assumption that all features are conditionally independent given the class label.
 It predicts the class with the highest posterior probability using simple statistical parameters such as mean and variance for each feature.
 Naive Bayes is a probabilistic classifier based on Bayes’ Theorem:
-
-$$ 
-P\left(C_k\middle| x\right)=\frac{P\left(x\middle| C_k\right)P\left(C_k\right)}{P\left(x\right)} 
-$$
+<p align="center">
+	$$ 
+	P\left(C_k\middle| x\right)=\frac{P\left(x\middle| C_k\right)P\left(C_k\right)}{P\left(x\right)} 
+	$$
+</p>
 Where:
 	C_k= a possible class (e.g., digit 0–9)
 	x=(x_1,x_2,\ldots,x_n)= the feature vector (pixel values)
