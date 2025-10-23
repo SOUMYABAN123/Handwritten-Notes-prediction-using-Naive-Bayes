@@ -234,6 +234,7 @@ Despite its simplicity, Gaussian Naive Bayes serves as an effective baseline mod
 	Copilot for fine tuning the code 
 	http://gnjatovic.info/machinelearning/gaussian.naive.bayes.classification.iris.1.R
 	http://gnjatovic.info/machinelearning/gaussian.naive.bayes.classification.iris.2.R
+	
 
 
 
