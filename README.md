@@ -48,17 +48,17 @@ BernoulliNB	Features are binary (0/1, presence/absence)	Bernoulli distribution
 	Input: Pixel intensities (0–255) of MNIST handwritten digits
 	Output: Predicted digit (0–9)
 	Key math:
-	<p align="center">
+<p align="center">
 		$$
 		P(C_k\mid x)\propto P(C_k)\prod_{i}P(x_i\mid C_k)
 		$$
-	</p>
-	<p align="center">
+</p>
+<p align="center">
 		$$
 		where P(x_i\mid C_k)is modeled as a Gaussian:
 		P(x_i\mid C_k)=\frac{1}{\sqrt{2\pi\sigma_{k,i}^2}}\exp\funcapply\mathrm{\thinsp⁣(-(xi-μk,i)22σk,i2)
 		$$
-	</p>
+</p>
 
 
 
